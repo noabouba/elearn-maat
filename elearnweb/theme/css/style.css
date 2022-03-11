@@ -1,0 +1,274 @@
+﻿
+/*=============================================================
+    Authour URI: www.binarytheme.com
+    License: Commons Attribution 3.0
+
+    http://creativecommons.org/licenses/by/3.0/
+
+    100% To use For Personal And Commercial Use.
+    IN EXCHANGE JUST GIVE US CREDITS AND TELL YOUR FRIENDS ABOUT US
+   
+    ========================================================  */
+
+
+/*=======================================
+    GENERAL STYLES
+==================================================*/
+:root {
+    --nav-color: rgb(66, 151, 141);
+}
+
+* {
+    margin: 0;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    background-image: url(../img/stardust.png);
+    min-height: 100%;
+    min-width: 100%;
+    height: 100%;
+    margin-bottom: 60px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    line-height: 50px;
+    font-weight: 900;
+    font-size: 40px;
+    padding: 50px 20px 5px 20px;
+    text-transform: uppercase;
+    color: rgba(0, 121, 138, 1);
+}
+
+
+.pad-adjust {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+h2 {
+    line-height: 50px;
+}
+
+h3 {
+    line-height: 30px;
+    padding-bottom: 20px;
+}
+
+h4 {
+    padding-top: 25px;
+    line-height: 40px;
+    padding-bottom: 0px;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+p {
+    font-weight: 300;
+    line-height: 30px;
+    padding-bottom: 15px;
+}
+
+.space-free {
+    height: 100px;
+}
+
+.g-pad-bottom {
+    padding-bottom: 40px;
+}
+
+section {
+    padding-top: 20px;
+    margin-top: 50px;
+}
+
+.c-blue {
+    background-color: rgba(0, 121, 138, 1);
+    color: #fff;
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, 0);
+}
+/*=======================================
+    HOME SECTION STYLES
+==================================================*/
+
+
+.head-btn-one {
+    background-color: rgba(252, 64, 101, 1);
+    border: 3px solid #f2ecec;
+}
+
+    .head-btn-one:hover {
+        background-color: rgba(252, 64, 101, 1);
+        border: 3px solid #3c3c3c;
+    }
+
+
+.head-container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    color: #fff;
+    background-color: rgba(167, 162, 162, 0.38);
+    border-radius: 3px;
+    margin-bottom: 60px;
+}
+
+
+.head-main {
+    font-size: 80px;
+    font-weight: 900;
+}
+
+.head-sub-main {
+    font-size: 40px;
+    font-weight: 600;
+    padding: 5px 20px 10px 20px;
+}
+
+.head-last {
+    font-size: 20px;
+    font-weight: 300;
+    padding: 5px 20px 20px 20px;
+}
+
+.btn-lg, .btn-group-lg > .btn {
+    border-radius: 0px;
+}
+/* ===========================================================
+   NAVBAR CHANGES   
+   ============================================================*/
+.navbar {
+    font-size: 18px;
+    position: relative;
+}
+
+
+.navbar-inverse {
+    background: var(--nav-color);
+}
+
+.navbar-toggle {
+    background-color: rgbvar(--nav-color);
+}
+
+.navbar-inverse .navbar-nav > .active > a {
+    background: var(--nav-color);
+}
+
+.navbar-inverse .navbar-brand {
+    color: #ffffff;
+    font-weight: bolder;
+    font-weight: 900;
+}
+
+.navbar-inverse :hover .navbar-brand:hover {
+    color: #000000;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+    .navbar-inverse .navbar-nav > li > a:hover {
+        color: #000000;
+    }
+
+.navbar-brand {
+    font-size: 28px;
+    padding-top: 12px;
+}
+
+#nav-form > input {
+    background-color: #bbbbbb;
+    !important;
+}
+
+/*=======================================
+    FOOTER STYLES
+==================================================*/
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1.5em;
+    color: white;
+    font-weight: bold;
+    background-color: var(--nav-color);
+    text-align: center;
+}
+
+/*=======================================
+    AMIT ADDS
+==================================================*/
+
+p.ajax-error {
+    color: #8b8484;
+    font-size: 24px;
+    font-weight: 800;
+    text-align:justify;
+}
+
+/*=======================================
+    COURSELIST
+==================================================*/
+
+.table-font {
+    font-size: 26px;
+    color: #FFFFFF;
+    border: 2px solid+;
+    border-radius: 5px;
+    width: 75%;
+    margin: 0px auto;
+    float: none;
+}
+
+
+.course-table-cell {
+    padding: 10px;
+    padding-right: 10px;
+    min-width: 120px;
+    text-align: left;
+}
+
+    .course-table-cell > button {
+        padding-left: 250px;
+        display: block;
+    }
+
+    .course-table-cell > a {
+        text-decoration: none;
+        color: #0d0d0d;
+    }
+
+
+
+
+/*=======================================
+    COURSE PAGE
+==================================================*/
+
+.lesson-list-container > ul {
+    border: 3px solid black;
+    max-height: 10px;
+    max-width: 110px;
+    overflow: scroll;
+    overflow-x: hidden;
+}

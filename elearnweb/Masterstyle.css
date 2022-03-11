@@ -1,0 +1,42 @@
+﻿body, .table-font td, .table-font tr, .table-font a {
+   font-family: 'Roboto',sans-serif;
+
+}
+li > input ~ span{
+    color:red;
+    font-weight: bold;
+}
+
+.navbar {
+    background-color: #ECEFF1;
+    width: 65%;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+}
+
+    .navbar table {
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .navbar td {
+        text-align: center;
+        font-size: 48px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+        .navbar td#navlogin {
+            padding-right: 25px;
+            font-size: 24px;
+        }
+
+        .navbar td a {
+            color: #263238;
+            text-decoration: none;
+        }
+

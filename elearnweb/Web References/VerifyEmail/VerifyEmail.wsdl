@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="RegularVerify">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="subscriber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegularVerifyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegularVerifyResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CustomMessageVerify">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="subscriber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CustomMessageVerifyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CustomMessageVerifyResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="subscriber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VerifyCodeResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsUserVerified">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="subscriber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsUserVerifiedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsUserVerifiedResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Register">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="subscriber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegisterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegisterResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVerifiedUsers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="subscriber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVerifiedUsersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVerifiedUsersResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RegularVerifySoapIn">
+    <wsdl:part name="parameters" element="tns:RegularVerify" />
+  </wsdl:message>
+  <wsdl:message name="RegularVerifySoapOut">
+    <wsdl:part name="parameters" element="tns:RegularVerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="CustomMessageVerifySoapIn">
+    <wsdl:part name="parameters" element="tns:CustomMessageVerify" />
+  </wsdl:message>
+  <wsdl:message name="CustomMessageVerifySoapOut">
+    <wsdl:part name="parameters" element="tns:CustomMessageVerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerifyCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:VerifyCode" />
+  </wsdl:message>
+  <wsdl:message name="VerifyCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:VerifyCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsUserVerifiedSoapIn">
+    <wsdl:part name="parameters" element="tns:IsUserVerified" />
+  </wsdl:message>
+  <wsdl:message name="IsUserVerifiedSoapOut">
+    <wsdl:part name="parameters" element="tns:IsUserVerifiedResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegisterSoapIn">
+    <wsdl:part name="parameters" element="tns:Register" />
+  </wsdl:message>
+  <wsdl:message name="RegisterSoapOut">
+    <wsdl:part name="parameters" element="tns:RegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVerifiedUsersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVerifiedUsers" />
+  </wsdl:message>
+  <wsdl:message name="GetVerifiedUsersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVerifiedUsersResponse" />
+  </wsdl:message>
+  <wsdl:portType name="VerifyEmailSoap">
+    <wsdl:operation name="SendVerification">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Send verification Email. Returns True if succeeded</wsdl:documentation>
+      <wsdl:input name="RegularVerify" message="tns:RegularVerifySoapIn" />
+      <wsdl:output name="RegularVerify" message="tns:RegularVerifySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendVerification">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Send verification Email using a custom message. Message must contain `&lt;CODE&gt;` - where the code will appear. Returns True if succeeded</wsdl:documentation>
+      <wsdl:input name="CustomMessageVerify" message="tns:CustomMessageVerifySoapIn" />
+      <wsdl:output name="CustomMessageVerify" message="tns:CustomMessageVerifySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Checks if a verification code is matching the Email. Returns True if verified, false if couldn't.</wsdl:documentation>
+      <wsdl:input message="tns:VerifyCodeSoapIn" />
+      <wsdl:output message="tns:VerifyCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUserVerified">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns whether an email is already verified</wsdl:documentation>
+      <wsdl:input message="tns:IsUserVerifiedSoapIn" />
+      <wsdl:output message="tns:IsUserVerifiedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Register as a subscriber</wsdl:documentation>
+      <wsdl:input message="tns:RegisterSoapIn" />
+      <wsdl:output message="tns:RegisterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVerifiedUsers">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns all verified users by Subscriber in a Datatable.</wsdl:documentation>
+      <wsdl:input message="tns:GetVerifiedUsersSoapIn" />
+      <wsdl:output message="tns:GetVerifiedUsersSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="VerifyEmailSoap" type="tns:VerifyEmailSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendVerification">
+      <soap:operation soapAction="http://tempuri.org/RegularVerify" style="document" />
+      <wsdl:input name="RegularVerify">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="RegularVerify">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendVerification">
+      <soap:operation soapAction="http://tempuri.org/CustomMessageVerify" style="document" />
+      <wsdl:input name="CustomMessageVerify">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CustomMessageVerify">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyCode">
+      <soap:operation soapAction="http://tempuri.org/VerifyCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsUserVerified">
+      <soap:operation soapAction="http://tempuri.org/IsUserVerified" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <soap:operation soapAction="http://tempuri.org/Register" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVerifiedUsers">
+      <soap:operation soapAction="http://tempuri.org/GetVerifiedUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="VerifyEmailSoap12" type="tns:VerifyEmailSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendVerification">
+      <soap12:operation soapAction="http://tempuri.org/RegularVerify" style="document" />
+      <wsdl:input name="RegularVerify">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="RegularVerify">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendVerification">
+      <soap12:operation soapAction="http://tempuri.org/CustomMessageVerify" style="document" />
+      <wsdl:input name="CustomMessageVerify">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CustomMessageVerify">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyCode">
+      <soap12:operation soapAction="http://tempuri.org/VerifyCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsUserVerified">
+      <soap12:operation soapAction="http://tempuri.org/IsUserVerified" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <soap12:operation soapAction="http://tempuri.org/Register" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVerifiedUsers">
+      <soap12:operation soapAction="http://tempuri.org/GetVerifiedUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VerifyEmail">
+    <wsdl:port name="VerifyEmailSoap" binding="tns:VerifyEmailSoap">
+      <soap:address location="http://localhost:5885/VerifyEmail.asmx" />
+    </wsdl:port>
+    <wsdl:port name="VerifyEmailSoap12" binding="tns:VerifyEmailSoap12">
+      <soap12:address location="http://localhost:5885/VerifyEmail.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
